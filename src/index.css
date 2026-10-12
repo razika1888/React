@@ -1,0 +1,200 @@
+/* Ícones (npm i bootstrap-icons). O @import precisa ser a primeira regra. */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ==========================================================================
+   Tokens globais
+   ========================================================================== */
+:root {
+  /* Fundo e superfícies */
+  --bg-0: #060a14;
+  --bg-1: #0c1329;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Texto */
+  --text: #f5f4eb;
+  --text-muted: #9ea5bd;
+
+  /* Acento (azul do player) */
+  --accent: #4388ff;
+  --accent-strong: #164fbd;
+  --accent-deep: #174eae;
+  --accent-glow: rgba(67, 136, 255, 0.35);
+
+  /* Tipografia */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+    sans-serif;
+  --font-alt-1: 'Jost';
+  --font-alt-2: 'Playfair Display';
+
+  /* Forma e movimento */
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: #243255 transparent;
+}
+
+
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--bg-0);
+
+  background-image:
+  
+    /* Vermelho escuro */
+    radial-gradient(
+      55rem 40rem at 0% 15%,
+      #8A0303 0%,
+      transparent 70%
+    ),
+
+    /* Vermelho claro */
+    radial-gradient(
+      50rem 38rem at 20% 50%,
+      #C10505 0%,
+      transparent 70%
+    ),
+
+    /* Roxo escuro */
+    radial-gradient(
+      50rem 38rem at 45% 15%,
+      #4A087A 0%,
+      transparent 70%
+    ),
+
+    /* Roxo claro */
+    radial-gradient(
+      50rem 38rem at 55% 85%,
+      #7818C2 0%,
+      transparent 70%
+    ),
+
+    /* Azul escuro */
+    radial-gradient(
+      55rem 40rem at 80% 15%,
+      #034FA0 0%,
+      transparent 70%
+    ),
+
+    /* Azul claro */
+    radial-gradient(
+      50rem 38rem at 100% 70%,
+      #0476F2 0%,
+      transparent 70%
+    ),
+
+    /* Base */
+    linear-gradient(
+      180deg,
+      var(--bg-1),
+      var(--bg-0)
+    );
+
+  background-attachment: fixed;
+}
+
+/* Granulado retro */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+
+  opacity: 1;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+
+  background-size: 100px 100px;
+  mix-blend-mode: soft-light;
+}
+
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* ==========================================================================
+   Utilitários
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-glow);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

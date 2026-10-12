@@ -1,0 +1,45 @@
+.footer {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+}
+
+.footer i {
+    color: #5865F2;
+    font-size: 1.5rem;
+}
+
+.texto-container {
+    position: relative;
+    display: inline-block
+}
+
+.img-footer{
+    position: absolute;
+    z-index: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+}
+
+.texto-container h1 {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-flex {
+    display: flex;
+    gap: 10px;
+    justify-content: center; align-items: center;
+}
+
+.razika {
+    width: 48px; height: 48px;
+    border-radius: 8px;
+    border: 2px solid black;
+}
