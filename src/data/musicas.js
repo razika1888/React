@@ -27,7 +27,8 @@ const musicas = [
   { id: 4, titulo: "Johnny B. Goode", artista: "Chuck Berry", genero: "Rock", duracao: 162, capa: "https://m.media-amazon.com/images/I/71DFIo6p8GL._UF1000,1000_QL80_.jpg"},
   { id: 5, titulo: "Crocodile Rock", artista: "Elton John", genero: "Rock", duracao: 236, capa: "https://upload.wikimedia.org/wikipedia/pt/a/a3/Elton_John_-_1973_-_Don%27t_Shoot_Me_I%27m_Only_the_Piano_Player.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"},
   { id: 6, titulo: "Isn't She Lovely", artista: "Stevie Wonder", genero: "R&B", duracao: 200, capa: "https://upload.wikimedia.org/wikipedia/pt/b/b2/Songs_in_the_Key_of_Life.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"},
-  { id: 7, titulo: "Don't Stop 'Til You Get Enough", artista: "Michael Jackson", genero: "Funk", duracao: 366, capa: "https://m.media-amazon.com/images/I/812EgYpATnL.jpg"}
+  { id: 7, titulo: "Don't Stop 'Til You Get Enough", artista: "Michael Jackson", genero: "Funk", duracao: 366, capa: "https://m.media-amazon.com/images/I/812EgYpATnL.jpg"},
+  { id: 8, titulo: "Faz Mais uma Vez Comigo", artista: "Zezé Di Camargo & Luciano", genero: "Sertanejo", duracao: 252, capa: "https://cdn.immub.org/capas/7179/thumbnails/m_7179ca.jpg"}
 ];
 
 export default musicas;
