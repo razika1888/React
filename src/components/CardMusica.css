@@ -342,3 +342,53 @@
     gap: 6px;
   }
 }
+
+/* Controle de volume */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.volume-button {
+  flex-shrink: 0;
+}
+
+.volume-slider {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  margin: 0;
+
+  cursor: pointer;
+  accent-color: currentColor;
+
+  transition:
+    width 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Revela a barra ao passar o mouse */
+.volume-control:hover .volume-slider,
+.volume-control:focus-within .volume-slider {
+  width: 90px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Aparência da barra */
+.volume-slider {
+  height: 4px;
+  min-width: 0;
+  vertical-align: middle;
+}
+
+/* Mantém o controle utilizável em telas sensíveis ao toque */
+@media (hover: none) {
+  .volume-slider {
+    width: 70px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

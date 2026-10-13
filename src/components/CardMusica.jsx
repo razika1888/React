@@ -35,6 +35,8 @@ function CardMusica({
   tempoAtual = 0,
   aleatorio = false,
   repetir = false,
+  volume = 0.7,
+  onVolumeChange,
   onPlay,
   onPrevious,
   onNext,
@@ -226,9 +228,38 @@ function CardMusica({
             <i className="bi bi-pip" />
           </button>
 
-          <button type="button" className="music-icon" aria-label="Volume">
-            <i className="bi bi-volume-up" />
-          </button>
+          <div className="volume-control">
+            <button
+              type="button"
+              className="music-icon volume-button"
+              aria-label="Controle de volume"
+              title="Volume"
+            >
+              <i
+                className={`bi ${volume === 0
+                    ? 'bi-volume-mute'
+                    : volume < 0.5
+                      ? 'bi-volume-down'
+                      : 'bi-volume-up'
+                  }`}
+              />
+            </button>
+
+            <input
+              className="volume-slider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={(e) =>
+                onVolumeChange?.(Number(e.target.value))
+              }
+              aria-label="Volume da música"
+              aria-valuetext={`${Math.round(volume * 100)}%`}
+              title={`Volume: ${Math.round(volume * 100)}%`}
+            />
+          </div>
 
           <button type="button" className="music-icon" aria-label="Expandir">
             <i className="bi bi-arrows-angle-expand" />

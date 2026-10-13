@@ -1,5 +1,5 @@
-import corinthians from '../../public/corinthians.png'
-import razikaPfp from '../../public/razika_pfp.png'
+import corinthians from '/corinthians.png'
+import razikaPfp from '/razika_pfp.png'
 import './Rodape.css'
 
 function Rodape() {
